@@ -1,0 +1,20 @@
+---
+const { imagen = "orde2.png", descripcion } = Astro.props;
+---
+
+<div class="relative px-6 py-8">
+    <div class="relative shadow-pink-200 shadow-sm p-4 rounded-lg dark: w-full">
+      <!-- Mini caja en el borde derecho inferior, superponiéndola al ring -->
+      <div class="right-2 bottom-2 z-10 absolute bg-gray-200 px-2 py-1 rounded font-bold text-gray-800 text-sm">
+        Java
+      </div>
+      <h1 class="pt-2 pb-1 font-bold"><slot /></h1>
+  
+      <!-- Imagen a la izquierda debajo del h1 -->
+      <div class="flex items-center space-x-4 pt-2">
+        <img src={imagen} alt="Imagen" class="w-16 h-16 object-cover">
+        <p class="text-zinc-600"><slot name="description" /></p>
+      </div>
+    </div>
+  </div>
+  

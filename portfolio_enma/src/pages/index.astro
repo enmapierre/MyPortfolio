@@ -2,13 +2,63 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Badge from '../components/Badge.astro';
+import Cajas from '../components/Cajas.astro';
+import Linkedin from '../components/iconos/Linkedin.astro';
+import Flecha from '../components/iconos/Flecha.astro';
+import GitHub from '../components/iconos/GitHub.astro';
+import Email from '../components/iconos/Email.astro';
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<section class="flex flex-col items-start gap-x-4 mx-auto py-32 w-full lg:w-[700px]">
-			<h1 class="flex-row justify-center pb-4 font-bold text-5xl">Hey!, I'm Enma<div class="flex justify-center items-center"><Badge>Aviable to hire</Badge></div></h1>
-			<h2 class="text-justify">I’m a recent DAM graduate wi th a strong passion for design and a goal of becoming a front-end developer. While I don’t have professional experience yet, I’m eager to learn, grow, and contribute to exciting projects. My background in fashion design, along with my technical studies, has sharpened my creativity and attention to detail—skills I’m excited to bring to the world of web development. I’m enthusiastic, hardworking, and ready to take on new challenges to build a successful career in tech</h2>
+		<section class="flex flex-col items-start gap-x-4 mx-auto py-8 w-full lg:w-[700px]">
+			<h1 class="flex flex-row justify-center gap-x-4 pb-4 font-bold text-5xl">Hey!, I'm Enma<a href="https://www.linkedin.com/in/enma-piedra-fern%C3%A1ndez-0bb4bb256/" target="_blank" rel="noopener" class="inline-block relative -top-4 justify-center items-center"><Badge>Aviable to hire</Badge></a></h1>
+			<h2 class="text-justify text-wrap">I’m a recent DAM graduate with a strong <span class="text-pink-300">passion for design </span> and a goal of becoming a <span class="text-pink-300">front-end developer</span>.
+				While I don’t have professional experience yet, I’m eager to learn, grow, and contribute to exciting projects.
+				My background in fashion design, along with my technical studies, has sharpened my <span class="text-pink-300">creativity and attention to detail—skills</span> I’m excited to bring to the world of <span>web development</span>.
+				I’m enthusiastic, hardworking, and ready to take on new challenges to build a successful career in tech.
+			</h2>
+
+			<nav class="flex gap-4 mt-8">
+				<a href="https://www.linkedin.com/in/enma-piedra-fern%C3%A1ndez-0bb4bb256/">
+					<Linkedin class="size-6"></Linkedin></a>
+				<a href="https://github.com/enmapierre">
+					<GitHub class="size-6"></GitHub></a>
+				<a href="enmapiedrafernandez@gmail.com">
+					<Email class="size-6"></Email></a>
+			</nav>
+
+		</section>
+
+		<section class="flex flex-col items-start gap-x-4 mx-auto py-12 w-full lg:w-[700px]">
+			<div class="flex">
+				<h2 class="font-bold text-3xl text-justify text-wrap">My <span class="text-pink-300">Projects</span></h2>
+				<div class="inline-block relative flex-col"><Flecha clas=""></Flecha></div>
+			</div>
+			<div class="flex flex-col">
+				<Cajas imagen="orde2.png">
+					Simon Says <!-- Esto irá en el slot principal -->
+					<span slot="description">
+						I developed a fun and interactive Simon Says game in Java. The game challenges players to follow a sequence of commands, testing their memory and attention to detail.
+						Using Java the game displays color patterns or text prompts that players must replicate. Each round, the sequence grows longer, increasing the difficulty as you progress. The project demonstrates my skills in object-oriented programming. <!-- Esto irá en el slot "description" -->
+					</span>
+				</Cajas>
+				<Cajas imagen="orde3.png">
+					Virtual Machine <!-- Esto irá en el slot principal -->
+					<span slot="description">
+						I designed and implemented a Virtual Machine in Java that performs various mathematical operations, including addition, subtraction, multiplication, and division. The program mimics the functionality of a CPU, processing instructions sequentially with precision and efficiency.
+						 It includes a simple command-line interface where users can input mathematical expressions, which the virtual machine interprets and executes. This project showcases my skills in Java programming, system simulation, and algorithm design, emphasizing my ability to create efficient and reliable computational systems. <!-- Esto irá en el slot "description" -->
+					</span>
+				</Cajas>
+				<Cajas imagen="orde1.png">
+					Memory <!-- Esto irá en el slot principal -->
+					<span slot="description">
+						I created an engaging Memory Game using Python, where players match pairs of cards by remembering their positions. 
+						Each turn, players flip two cards, trying to find matching pairs while the game tracks their progress. This project showcases my skills in Python programming, logic implementation, as well as my ability to create fun and challenging experiences for users <!-- Esto irá en el slot "description" -->
+					</span>
+				</Cajas>
+				
+			</div>
 		</section>
 	</main>
 </Layout>
