@@ -12,6 +12,16 @@ import GitHub from '../components/iconos/GitHub.astro';
 import Email from '../components/iconos/Email.astro';
 import Java from '../components/iconos/Java.astro';
 import Python from '../components/iconos/Python.astro';
+import Illus from '../components/iconos/Illus.astro';
+import Ass from '../components/iconos/Ass.astro';
+import Visual from '../components/iconos/Visual.astro';
+import Css from '../components/iconos/Css.astro';
+import Html from '../components/iconos/Html.astro';
+import Eclipse from '../components/iconos/Eclipse.astro';
+import Git from '../components/iconos/Git.astro';
+import Photo from '../components/iconos/Photo.astro';
+import Tail from '../components/iconos/Tail.astro';
+import Indeg from '../components/iconos/Indeg.astro';
 
 const images = [
   { src: 'funciones1.PNG', alt: 'Placeholder 1' },
@@ -26,6 +36,7 @@ const images2 = [
   { src: 'eva5.PNG', alt: 'Placeholder 4' },
   { src: 'eva2.PNG', alt: 'Placeholder 5' },
 ];
+
 ---
 
 <Layout title="Welcome to Astro.">
@@ -37,7 +48,6 @@ const images2 = [
 				My background in fashion design, along with my technical studies, has sharpened my <span class="text-pink-300">creativity and attention to detail—skills</span> I’m excited to bring to the world of <span>web development</span>.
 				I’m enthusiastic, hardworking, and ready to take on new challenges to build a successful career in tech.
 			</h2>
-
 			<nav class="flex gap-4 mt-8">
 				<a href="https://www.linkedin.com/in/enma-piedra-fern%C3%A1ndez-0bb4bb256/">
 					<Linkedin class="size-6"></Linkedin></a>
@@ -46,7 +56,6 @@ const images2 = [
 				<a href="enmapiedrafernandez@gmail.com">
 					<Email class="size-6"></Email></a>
 			</nav>
-
 		</section>
 
 		<section class="flex flex-col gap-x-4 py-12">
@@ -88,7 +97,6 @@ const images2 = [
 		</section>
 
 		<section class="flex flex-col items-center gap-y-8 py-12">
-			<!-- Título -->
 			<div class="flex flex-col gap-y-4 mx-auto w-full lg:w-[700px]">
 				<div class="flex flex-row items-center gap-x-2">
 					<h1 class="font-bold text-3xl">My<span class="text-pink-300">Designs</span></h1>
@@ -101,18 +109,15 @@ const images2 = [
 				</p>
 			</div>
 			
-		  
-			<!-- Carrusel con título -->
 			<div class="flex flex-col gap-y-4 w-full lg:w-[950px]">
 				<div class="flex flex-row items-center gap-x-2">
 					<h5 class="font-bold text-lg">Funciones Chulas</h5>
-					<Ojo />
 				</div>
 				
 				<p class="text-justify text-sm">
 					Class project focused on designing an educational website that makes learning 
 					mathematical functions more engaging for students. Through intuitive and 
-					playful design, this platform transforms studying into an enjoyable experience, 
+					playful design using <span class="text-pink-300"> HTML and CSS </span>, this platform transforms studying into an enjoyable experience, 
 					combining interactive elements with learning objectives
 				</p>
 				
@@ -126,22 +131,55 @@ const images2 = [
 				</div>
 				
 				<p class="text-justify text-sm">
-					Class project focused on designing an educational website that makes learning 
-					mathematical functions more engaging for students. Through intuitive and 
-					playful design, this platform transforms studying into an enjoyable experience, 
-					combining interactive elements with learning objectives
+					For this project, we were tasked with creating a website that simulates a retail store using <span class="text-pink-300">HTML and CSS</span>. I chose a futuristic design aesthetic since the store specializes in selling robots.
+					 The futuristic theme perfectly complements the product line and creates an immersive shopping experience.
 				</p>
 				
 				<Carrusel images={images2} />
 			</div>
-			
-			
+		</section>
 
-		  </section>
+		<section class="flex flex-col items-center gap-y-8 py-12">
+			<div class="flex flex-col gap-y-4 mx-auto w-full lg:w-[700px]">
+				<div class="flex flex-row items-center gap-x-2">
+					<h1 class="font-bold text-3xl">
+						My<span class="text-pink-300">Skills</span>
+					</h1>
+					<Flecha />
+				</div>
+			</div>
+			<div class="flex flex-row justify-start gap-y-4 ml-80 pl-72 w-full">
+				<div class="gap-6 border-gray-200 dark:border-gray-700 grid grid-cols-2 md:grid-cols-4 dark:bg-gray-800 shadow-lg shadow-pink-200 p-6 border rounded-lg">
+					<Java size="w-10 h-10" customClass="text-blue-500 flex justify-center items-center" />
+					<Python size="w-10 h-10" customClass="text-blue-500 flex justify-center items-center" />
+					<Visual size="w-10 h-10" customClass="text-blue-500 flex justify-center items-center" />
+					<Css size="w-10 h-10" customClass="text-blue-500 flex justify-center items-center" />
+					<Html size="w-10 h-10" customClass="text-blue-500 flex justify-center items-center" />
+					<Eclipse size="w-10 h-10" customClass="text-blue-500 flex justify-center items-center" />
+					<Git size="w-10 h-10" customClass="text-blue-500 flex justify-center items-center" />
+					<Ass size="w-10 h-10" customClass="text-blue-500 flex justify-center items-center" />
+					<Photo size="w-10 h-10" customClass="text-blue-500 flex justify-center items-center" />
+					<Illus size="w-10 h-10" customClass="text-blue-500 flex justify-center items-center" />
+					<Tail size="w-10 h-10" customClass="text-blue-500 flex justify-center items-center" />
+					<Indeg size="w-10 h-10" customClass="text-blue-500 flex justify-center items-center" />
+				</div>
+				<div class="flex flex-col items-center mt-6">
+					<img
+						class="w-40 h-40 object-contain"
+						src="ilustracion.png"
+						alt="enma_foto"
+					/>
+					<h2 class="mt-4 pl-40 font-bold text-2xl dark:text-gray-200">
+						See<span class="text-pink-300"> you </span>soon!
+					</h2>
+				</div>
+			</div>
+		</section>		
 
-		  <section>
+		<section>
 			<Footer></Footer>
-		  </section>
+		</section>
+
 	</main>
 </Layout>
 
