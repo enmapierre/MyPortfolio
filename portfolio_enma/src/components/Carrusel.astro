@@ -11,18 +11,20 @@ interface Props {
 const { images }: Props = Astro.props;
 ---
 
-<div class="flex space-x-4 p-4 snap-mandatory snap-x overflow-x-auto scrollbar-hide">
-  {images?.length > 0 ? (
-    images.map((image, index) => (
-      <div class="flex-shrink-0 snap-start">
-        <img 
-          class="rounded-lg w-80 h-40 object-cover" 
-          src={image.src} 
-          alt={image.alt || `Image ${index + 1}`} 
-        />
-      </div>
-    ))
-  ) : (
-    <p class="text-gray-500 dark:text-gray-300">No images to display.</p>
-  )}
-</div>
+  <div class="flex space-x-4 p-4 snap-mandatory snap-x overflow-x-auto scrollbar-hide">
+    {images?.length > 0 ? (
+      images.map((image, index) => (
+        <div class="flex-shrink-0 snap-start">
+          <img 
+            class="rounded-lg w-80 h-40 object-cover" 
+            src={image.src} 
+            alt={image.alt || `Image ${index + 1}`} 
+          />
+        </div>
+      ))
+    ) : (
+      <p class="text-gray-500 dark:text-gray-300">No images to display.</p>
+    )}
+  </div>
+
+

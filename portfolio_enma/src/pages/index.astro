@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Badge from '../components/Badge.astro';
 import Cajas from '../components/Cajas.astro';
+import Footer from '../components/Footer.astro';
 import Carrusel from '../components/Carrusel.astro';
 import Linkedin from '../components/iconos/Linkedin.astro';
 import Flecha from '../components/iconos/Flecha.astro';
@@ -10,9 +11,17 @@ import GitHub from '../components/iconos/GitHub.astro';
 import Email from '../components/iconos/Email.astro';
 
 const images = [
-  { src: 'https://via.placeholder.com/320x160', alt: 'Placeholder 1' },
-  { src: 'https://via.placeholder.com/320x160', alt: 'Placeholder 2' },
-  { src: 'https://via.placeholder.com/320x160', alt: 'Placeholder 3' },
+  { src: 'funciones1.PNG', alt: 'Placeholder 1' },
+  { src: 'funciones2.PNG', alt: 'Placeholder 2' },
+  { src: 'funciones3.PNG', alt: 'Placeholder 3' },
+  { src: 'funciones4.PNG', alt: 'Placeholder 4' },
+];
+const images2 = [
+  { src: 'eva1.PNG', alt: 'Placeholder 1' },
+  { src: 'eva2.PNG', alt: 'Placeholder 2' },
+  { src: 'eva3.PNG', alt: 'Placeholder 3' },
+  { src: 'eva4.PNG', alt: 'Placeholder 4' },
+  { src: 'eva5.PNG', alt: 'Placeholder 5' },
 ];
 ---
 
@@ -42,49 +51,59 @@ const images = [
 				<h2 class="font-bold text-3xl text-justify text-wrap">My<span class="text-pink-300">Projects</span></h2>
 				<div class="inline-block relative flex-col"><Flecha clas=""></Flecha></div>
 			</div>
-			<div class="flex flex-row justify-center gap-x-12 py-2">
+			<div class="flex flex-row justify-center gap-x-6 py-2">
 				<Cajas 
-					imagen="orde1.png" imageSize="w-28" imagePadding="pl-6 pt-6" descriptionPadding="px-8 py-4 pt-6 pb-4"  
+					imagen="orde1.png" imageSize="w-24" imagePadding="pl-4" descriptionPadding="px-4 pb-4"  
         			buttonPadding="px-6 py-3" href="https://github.com/enmapierre/SimonDiceFinal" >
 					Simon Says <!-- Esto irá en el slot principal -->
 					<span slot="description">
 						I developed a fun and interactive Simon Says game in Java. The game challenges players to follow a sequence of commands, testing their memory and attention to detail.
-						Using Java the game displays color patterns or text prompts that players must replicate. Each round, the sequence grows longer, increasing the difficulty as you progress. The project demonstrates my skills in object-oriented programming. <!-- Esto irá en el slot "description" -->
+						Using Java the game displays color patterns or text prompts that players must replicate. Each round, the sequence grows longer, increasing the difficulty as you progress. <!-- Esto irá en el slot "description" -->
 					</span>
 				</Cajas>
 				<Cajas 
-					imagen="orde3.png" imageSize="w-48 " imagePadding=" pl-5 pt-6" descriptionPadding="px-8 py-4 pb-5"  
-        			buttonPadding="px-6 py-3" href="https://github.com/enmapierre/DivaVirtualFin" >
+					imagen="orde3.png" imageSize="w-40 " imagePadding="pl-4" descriptionPadding="px-4 pb-5"  
+        			buttonPadding="px-6 pt-8" href="https://github.com/enmapierre/DivaVirtualFin" >
 					Virtual Machine <!-- Esto irá en el slot principal -->
 					<span slot="description">
-						I designed and implemented a Virtual Machine in Java that performs various mathematical operations, including addition, subtraction, multiplication, and division. The program mimics the functionality of a CPU, processing instructions sequentially with precision and efficiency.
+						I designed and implemented a Virtual Machine in Java that performs various mathematical operations, including addition, subtraction, multiplication, and division.
 						 It includes a simple command-line interface where users can input mathematical expressions, which the virtual machine interprets and executes.  <!-- Esto irá en el slot "description" -->
 					</span>
 				</Cajas>
 				<Cajas 
-					imagen="orde2.png" imageSize="w-46" imagePadding="pl-6 pt-7" descriptionPadding="px-8 py-4 pt-10 pb-10" 
-        			buttonPadding="px-6 py-3" href="https://github.com/enmapierre/Memory" >
+					imagen="orde2.png" imageSize="w-43" imagePadding="pl-4" descriptionPadding="px-4 pb-10" 
+        			buttonPadding="px-6 pt-6" href="https://github.com/enmapierre/Memory" >
 					Memory <!-- Esto irá en el slot principal -->
 					<span slot="description">
 						I created an engaging Memory Game using Python, where players match pairs of cards by remembering their positions. 
-						Each turn, players flip two cards, trying to find matching pairs while the game tracks their progress. This project showcases my skills in Python programming, logic implementation, as well as my ability to create fun and challenging experiences for users <!-- Esto irá en el slot "description" -->
+						Each turn, players flip two cards, trying to find matching pairs while the game tracks their progress. This project showcases my skills in Python programming, logic implementation. <!-- Esto irá en el slot "description" -->
 					</span>
 				</Cajas>
 				
 			</div>
 		</section>
 
-		<section class="flex flex-col items-start gap-x-4 mx-auto py-12 w-full lg:w-[700px]">
+		<section class="flex flex-col items-center gap-y-8 py-12">
+			<!-- Título -->
 			<div class="flex mx-auto w-full lg:w-[700px]">
-				<h2 class="font-bold text-3xl text-justify text-wrap">My web <span class="text-pink-300">Designs</span></h2>
+				<h2 class="font-bold text-3xl text-justify text-wrap">My<span class="text-pink-300">Designs</span></h2>
 				<div class="inline-block relative flex-col"><Flecha clas=""></Flecha></div>
 			</div>
-			<div class="">
-				<h5>EVA</h5>
+		  
+			<!-- Carrusel con título -->
+				<div class="flex flex-col items-center gap-y-4 w-full lg:w-[700px]">
+				<h5 class="font-semibold text-lg">EVA</h5>
 				<Carrusel images={images} />
-			</div>
+				</div>
+			<div class="flex flex-col items-center gap-y-4 w-full lg:w-[700px]">
+				<h5 class="font-semibold text-lg">EVA</h5>
+				<Carrusel images={images2} />
+			  </div>
+		  </section>
 
-		</section>
+		  <section>
+			<Footer></Footer>
+		  </section>
 	</main>
 </Layout>
 
