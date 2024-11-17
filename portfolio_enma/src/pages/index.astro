@@ -6,9 +6,12 @@ import Cajas from '../components/Cajas.astro';
 import Footer from '../components/Footer.astro';
 import Carrusel from '../components/Carrusel.astro';
 import Linkedin from '../components/iconos/Linkedin.astro';
+import Ojo from '../components/iconos/Ojo.astro';
 import Flecha from '../components/iconos/Flecha.astro';
 import GitHub from '../components/iconos/GitHub.astro';
 import Email from '../components/iconos/Email.astro';
+import Java from '../components/iconos/Java.astro';
+import Python from '../components/iconos/Python.astro';
 
 const images = [
   { src: 'funciones1.PNG', alt: 'Placeholder 1' },
@@ -17,11 +20,11 @@ const images = [
   { src: 'funciones4.PNG', alt: 'Placeholder 4' },
 ];
 const images2 = [
-  { src: 'eva1.PNG', alt: 'Placeholder 1' },
-  { src: 'eva2.PNG', alt: 'Placeholder 2' },
-  { src: 'eva3.PNG', alt: 'Placeholder 3' },
-  { src: 'eva4.PNG', alt: 'Placeholder 4' },
-  { src: 'eva5.PNG', alt: 'Placeholder 5' },
+  { src: 'eva3.PNG', alt: 'Placeholder 1' },
+  { src: 'eva1.PNG', alt: 'Placeholder 2' },
+  { src: 'eva4.PNG', alt: 'Placeholder 3' },
+  { src: 'eva5.PNG', alt: 'Placeholder 4' },
+  { src: 'eva2.PNG', alt: 'Placeholder 5' },
 ];
 ---
 
@@ -57,16 +60,17 @@ const images2 = [
         			buttonPadding="px-6 py-3" href="https://github.com/enmapierre/SimonDiceFinal" >
 					Simon Says <!-- Esto irá en el slot principal -->
 					<span slot="description">
-						I developed a fun and interactive Simon Says game in Java. The game challenges players to follow a sequence of commands, testing their memory and attention to detail.
-						Using Java the game displays color patterns or text prompts that players must replicate. Each round, the sequence grows longer, increasing the difficulty as you progress. <!-- Esto irá en el slot "description" -->
+						I developed a fun and interactive Simon Says game in Java. The game challenges players to follow a sequence of commands, testing their memory and attention to detail.Using
+						<span class="text-pink-300"> Java </span>the game displays color patterns or text prompts that players must replicate. Each round, the sequence grows longer, increasing the difficulty as you progress. <!-- Esto irá en el slot "description" -->
 					</span>
 				</Cajas>
 				<Cajas 
 					imagen="orde3.png" imageSize="w-40 " imagePadding="pl-4" descriptionPadding="px-4 pb-5"  
         			buttonPadding="px-6 pt-8" href="https://github.com/enmapierre/DivaVirtualFin" >
+						
 					Virtual Machine <!-- Esto irá en el slot principal -->
 					<span slot="description">
-						I designed and implemented a Virtual Machine in Java that performs various mathematical operations, including addition, subtraction, multiplication, and division.
+						I designed and implemented a Virtual Machine in <span class="text-pink-300">Java</span> that performs various mathematical operations, including addition, subtraction, multiplication, and division.
 						 It includes a simple command-line interface where users can input mathematical expressions, which the virtual machine interprets and executes.  <!-- Esto irá en el slot "description" -->
 					</span>
 				</Cajas>
@@ -75,7 +79,7 @@ const images2 = [
         			buttonPadding="px-6 pt-6" href="https://github.com/enmapierre/Memory" >
 					Memory <!-- Esto irá en el slot principal -->
 					<span slot="description">
-						I created an engaging Memory Game using Python, where players match pairs of cards by remembering their positions. 
+						I created an engaging Memory Game using  <span class="text-pink-300">Python</span>, where players match pairs of cards by remembering their positions. 
 						Each turn, players flip two cards, trying to find matching pairs while the game tracks their progress. This project showcases my skills in Python programming, logic implementation. <!-- Esto irá en el slot "description" -->
 					</span>
 				</Cajas>
@@ -85,20 +89,54 @@ const images2 = [
 
 		<section class="flex flex-col items-center gap-y-8 py-12">
 			<!-- Título -->
-			<div class="flex mx-auto w-full lg:w-[700px]">
-				<h2 class="font-bold text-3xl text-justify text-wrap">My<span class="text-pink-300">Designs</span></h2>
-				<div class="inline-block relative flex-col"><Flecha clas=""></Flecha></div>
+			<div class="flex flex-col gap-y-4 mx-auto w-full lg:w-[700px]">
+				<div class="flex flex-row items-center gap-x-2">
+					<h1 class="font-bold text-3xl">My<span class="text-pink-300">Designs</span></h1>
+					<Flecha />
+				</div>
+				
+				<p class="text-justify text-sm">
+					Through my journey in <span class="text-pink-300"> Fashion Design and DAM </span> studies, I've discovered my passion for blending aesthetics with technology. My fashion background has sharpened my eye for design, color harmony, and user experience - skills that naturally flow into front-end development.
+					Below, I showcase projects where I <span class="text-pink-300">combine creative design principles with technical expertise</span>, demonstrating my unique approach to web and app interfaces.
+				</p>
 			</div>
+			
 		  
 			<!-- Carrusel con título -->
-				<div class="flex flex-col items-center gap-y-4 w-full lg:w-[700px]">
-				<h5 class="font-semibold text-lg">EVA</h5>
-				<Carrusel images={images} />
+			<div class="flex flex-col gap-y-4 w-full lg:w-[950px]">
+				<div class="flex flex-row items-center gap-x-2">
+					<h5 class="font-bold text-lg">Funciones Chulas</h5>
+					<Ojo />
 				</div>
-			<div class="flex flex-col items-center gap-y-4 w-full lg:w-[700px]">
-				<h5 class="font-semibold text-lg">EVA</h5>
+				
+				<p class="text-justify text-sm">
+					Class project focused on designing an educational website that makes learning 
+					mathematical functions more engaging for students. Through intuitive and 
+					playful design, this platform transforms studying into an enjoyable experience, 
+					combining interactive elements with learning objectives
+				</p>
+				
+				<Carrusel images={images} />
+			</div>
+
+			<div class="flex flex-col gap-y-4 w-full lg:w-[950px]">
+				<div class="flex flex-row items-center gap-x-2">
+					<h5 class="font-bold text-lg">EVA Robot</h5>
+					<Ojo />
+				</div>
+				
+				<p class="text-justify text-sm">
+					Class project focused on designing an educational website that makes learning 
+					mathematical functions more engaging for students. Through intuitive and 
+					playful design, this platform transforms studying into an enjoyable experience, 
+					combining interactive elements with learning objectives
+				</p>
+				
 				<Carrusel images={images2} />
-			  </div>
+			</div>
+			
+			
+
 		  </section>
 
 		  <section>
