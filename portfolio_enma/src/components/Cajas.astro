@@ -4,7 +4,7 @@ import GitHub from "./iconos/GitHub.astro";
 const { imagen, imageSize, imagePadding, descriptionPadding, href, buttonPadding  } = Astro.props;
 ---
 
-<div class="flex flex-col border-gray-200 dark:border-gray-700 dark:bg-transparent shadow-lg shadow-pink-200 border rounded-lg max-w-xs scale-90">
+<div class="flex flex-col border-gray-200 dark:border-gray-700 dark:bg-transparent shadow-lg shadow-pink-200 border rounded-lg lg:max-w-xs scale-90 lg:scale-90">
     <div class="flex items-center p-4">
       <div class="flex-shrink-0">
         <a href="#">
@@ -16,13 +16,13 @@ const { imagen, imageSize, imagePadding, descriptionPadding, href, buttonPadding
         </a>
       </div>
       <a href="#" class="ml-4">
-        <h5 class="font-bold text-lg dark:text-neutral-300 tracking-tight">
+        <h5 class="font-bold lg:text-lg dark:text-neutral-300 tracking-tight">
           <slot />
         </h5>
       </a>
     </div>
     <div class="p-4">
-      <p class={`mb-3 text-justify text-sm dark:text-neutral-300 ${descriptionPadding}`}>
+      <p class={`mb-3 text-justify lg:text-sm dark:text-neutral-300 ${descriptionPadding}`}>
         <slot name="description" />
       </p>
       <a 

@@ -41,9 +41,9 @@ const images2 = [
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<section class="flex flex-col items-start gap-x-4 mx-auto py-8 w-full lg:w-[700px] dark:text-neutral-300">
-			<h1 class="flex flex-row justify-center gap-x-4 pb-4 font-bold text-5xl">Hey!, I'm Enma<a href="https://www.linkedin.com/in/enma-piedra-fern%C3%A1ndez-0bb4bb256/" target="_blank" rel="noopener" class="inline-block relative -top-4 justify-center items-center"><Badge>Aviable to hire</Badge></a></h1>
-			<h2 class="text-justify text-wrap">I’m a recent DAM graduate with a strong <span class="text-pink-300">passion for design </span> and a goal of becoming a <span class="text-pink-300">front-end developer</span>.
+		<section class="flex flex-col items-start gap-x-4 mx-auto px-4 lg:py-8 pl-36 lg:pl-0 w-[600px] lg:w-[700px] dark:text-neutral-300">
+			<h1 class="flex lg:flex-row flex-col justify-center items-start gap-x-4 pb-4 font-bold text-5xl">Hey!, I'm Enma<a href="https://www.linkedin.com/in/enma-piedra-fern%C3%A1ndez-0bb4bb256/" target="_blank" rel="noopener" class="inline-block relative -top-4 justify-center items-center"><Badge>Aviable to hire</Badge></a></h1>
+			<h2 class="text-justify text-lg text-wrap lg:text-base">I’m a recent DAM graduate with a strong <span class="text-pink-300">passion for design </span> and a goal of becoming a <span class="text-pink-300">front-end developer</span>.
 				While I don’t have professional experience yet, I’m eager to learn, grow, and contribute to exciting projects.
 				My background in fashion design, along with my technical studies, has sharpened my <span class="text-pink-300">creativity and attention to detail—skills</span> I’m excited to bring to the world of <span>web development</span>.
 				I’m enthusiastic, hardworking, and ready to take on new challenges to build a successful career in tech.
@@ -58,12 +58,12 @@ const images2 = [
 			</nav>
 		</section>
 
-		<section class="flex flex-col gap-x-4 py-12 dark:text-neutral-300">
+		<section class="flex flex-col gap-x-4 py-12 pr-10 pl-36 lg:pl-0 w-[670px] lg:w-full dark:text-neutral-300">
 			<div class="flex mx-auto w-full lg:w-[700px]">
 				<h2 class="font-bold text-3xl text-justify text-wrap">My<span class="text-pink-300">Projects</span></h2>
 				<div class="inline-block relative flex-col"><Flecha clas=""></Flecha></div>
 			</div>
-			<div class="flex flex-row justify-center gap-x-6 py-2">
+			<div class="flex lg:flex-row flex-col justify-center gap-x-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-2 text-lg lg:text-base">
 				<Cajas 
 					imagen="orde1.png" imageSize="w-24" imagePadding="pl-4" descriptionPadding="px-4 pb-4"  
         			buttonPadding="px-6 py-3" href="https://github.com/enmapierre/SimonDiceFinal" >
@@ -96,35 +96,37 @@ const images2 = [
 			</div>
 		</section>
 
-		<section class="flex flex-col items-center gap-y-8 py-12 dark:text-neutral-300">
+		<section class="flex flex-col items-center gap-y-8 py-12 pl-36 lg:pl-0 w-[670px] lg:w-full dark:text-neutral-300">
 			<div class="flex flex-col gap-y-4 mx-auto w-full lg:w-[700px]">
 				<div class="flex flex-row items-center gap-x-2">
 					<h1 class="font-bold text-3xl">My<span class="text-pink-300">Designs</span></h1>
 					<Flecha />
 				</div>
 				
-				<p class="text-justify text-sm">
+				<p class="w-[470px] lg:w-full text-justify text-lg lg:text-sm">
 					Through my journey in <span class="text-pink-300"> Fashion Design and DAM </span> studies, I've discovered my passion for blending aesthetics with technology. My fashion background has sharpened my eye for design, color harmony, and user experience - skills that naturally flow into front-end development.
 					Below, I showcase projects where I <span class="text-pink-300">combine creative design principles with technical expertise</span>, demonstrating my unique approach to web and app interfaces.
 				</p>
 			</div>
 			
-			<div class="flex flex-col gap-y-4 w-full lg:w-[950px]">
+			<div class="flex flex-col gap-y-4 pr-4 lg:pr-0 w-[400px] lg:w-[950px]">
 				<div class="flex flex-row items-center gap-x-2">
 					<h5 class="font-bold text-lg">Funciones Chulas</h5>
 				</div>
 				
-				<p class="text-justify text-sm">
+				<p class="text-justify text-lg lg:text-sm">
 					Class project focused on designing an educational website that makes learning 
 					mathematical functions more engaging for students. Through intuitive and 
 					playful design using <span class="text-pink-300"> HTML and CSS </span>, this platform transforms studying into an enjoyable experience, 
 					combining interactive elements with learning objectives
 				</p>
+				<div class="w-[400px] lg:w-[950px]">
+					<Carrusel images={images} />
+				</div>
 				
-				<Carrusel images={images} />
 			</div>
 
-			<div class="flex flex-col gap-y-4 w-full lg:w-[950px]">
+			<div class="flex flex-col gap-y-4 pr-4 lg:pr-0 w-[400px] lg:w-[950px]">
 				<div class="flex flex-row items-center gap-x-2">
 					<h5 class="font-bold text-lg">EVA Robot</h5>
 					<Ojo />
@@ -134,12 +136,14 @@ const images2 = [
 					For this project, we were tasked with creating a website that simulates a retail store using <span class="text-pink-300">HTML and CSS</span>. I chose a futuristic design aesthetic since the store specializes in selling robots.
 					 The futuristic theme perfectly complements the product line and creates an immersive shopping experience.
 				</p>
+				<div class="w-[400px] lg:w-[950px]">
+					<Carrusel images={images2} />
+				</div>
 				
-				<Carrusel images={images2} />
 			</div>
 		</section>
 
-		<section class="flex flex-col items-center gap-y-8 py-12 dark:text-neutral-300">
+		<section class="flex flex-col items-center gap-y-8 py-12 pr-10 pl-36 lg:pl-0 w-[670px] lg:w-full dark:text-neutral-300">
 			<div class="flex flex-col gap-y-4 mx-auto w-full lg:w-[700px]">
 				<div class="flex flex-row items-center gap-x-2">
 					<h1 class="font-bold text-3xl">
@@ -148,8 +152,8 @@ const images2 = [
 					<Flecha />
 				</div>
 			</div>
-			<div class="flex flex-row justify-start gap-y-4 ml-80 pl-72 w-full">
-				<div class="gap-6 border-gray-200 dark:border-gray-700 grid grid-cols-2 md:grid-cols-4 dark:bg-transparent shadow-lg shadow-pink-200 p-6 border rounded-lg">
+			<div class="flex flex-row justify-start gap-y-4 ml-40 lg:ml-80 pr-14 pl-0 lg:pl-72 w-full">
+				<div class="gap-6 border-gray-200 dark:border-gray-700 grid grid-cols-4 md:grid-cols-4 dark:bg-transparent shadow-lg shadow-pink-200 p-6 border rounded-lg">
 					<Java size="w-10 h-10" customClass="text-blue-500 flex justify-center items-center" />
 					<Python size="w-10 h-10" customClass="text-blue-500 flex justify-center items-center" />
 					<Visual size="w-10 h-10" customClass="text-blue-500 flex justify-center items-center" />
@@ -169,14 +173,14 @@ const images2 = [
 						src="ilustracion.png"
 						alt="enma_foto"
 					/>
-					<h2 class="mt-4 pl-40 font-bold text-2xl dark:text-gray-200">
+					<h2 class="mt-4 pl-20 lg:pl-40 font-bold text-2xl dark:text-gray-200">
 						See<span class="text-pink-300"> you </span>soon!
 					</h2>
 				</div>
 			</div>
 		</section>		
 
-		<section>
+		<section class="ml-10 lg:ml-0">
 			<Footer></Footer>
 		</section>
 
