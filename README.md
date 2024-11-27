@@ -16,7 +16,7 @@
 - 🛠️ **Proyectos:** Sección dedicada a los proyectos que he desarrollado.  
 - 🎨 **Diseños:** Galería con ejemplos de mis diseños gráficos.
 - 🖥️ **Skills:** Lenguajes, frameworks y herramientas . 
-- 🌙 **Modo Oscuro/Claro:** (Si implementaste esto) Interfaz amigable con un toggle para cambiar entre modo oscuro y claro.  
+- 🌙 **Modo Oscuro/Claro:** Interfaz amigable con un toggle para cambiar entre modo oscuro y claro.  
 
 ---
 
